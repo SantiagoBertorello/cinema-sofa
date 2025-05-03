@@ -1,6 +1,8 @@
 import com.aluradesafio.cinemasofa.calculos.CalculadoraDeTiempo;
+import com.aluradesafio.cinemasofa.modelos.Episodio;
 import com.aluradesafio.cinemasofa.modelos.Pelicula;
 import com.aluradesafio.cinemasofa.modelos.Serie;
+import com.aluradesafio.cinemasofa.calculos.FiltroRecomendacion;
 
 public class Principal {
     public static void main(String[] args) {
@@ -31,9 +33,19 @@ public class Principal {
         CalculadoraDeTiempo calculadora = new CalculadoraDeTiempo();
         calculadora.incluye(miPelicula);
         calculadora.incluye(gameOfThrones);
+
         System.out.println(calculadora.getTiempoTotal());
+        FiltroRecomendacion filtroRecomendacion = new FiltroRecomendacion();
 
 
+        filtroRecomendacion.filtra(miPelicula);
 
+        Episodio episodio = new Episodio();
+        episodio.setNumero(1);
+        episodio.setNombre("Winter Is Coming");
+        episodio.setSerie(gameOfThrones);
+        episodio.setTotalVisualizaciones(400);
+
+        filtroRecomendacion.filtra(episodio);
     }
 }
