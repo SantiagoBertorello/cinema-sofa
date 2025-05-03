@@ -1,8 +1,8 @@
 package com.aluradesafio.cinemasofa.modelos;
 
-import com.aluradesafio.cinemasofa.calculos.Clasificacion;
+import com.aluradesafio.cinemasofa.calculos.Clasificable;
 
-public class Episodio implements Clasificacion {
+public class Episodio implements Clasificable {
 
     private int numero;
 

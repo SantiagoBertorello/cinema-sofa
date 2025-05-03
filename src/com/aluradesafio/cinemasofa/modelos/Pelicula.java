@@ -1,8 +1,8 @@
 package com.aluradesafio.cinemasofa.modelos;
 
-import com.aluradesafio.cinemasofa.calculos.Clasificacion;
+import com.aluradesafio.cinemasofa.calculos.Clasificable;
 
-public class Pelicula extends Titulo implements Clasificacion {
+public class Pelicula extends Titulo implements Clasificable {
     private String director;
 
     public String getDirector() {

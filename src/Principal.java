@@ -35,10 +35,7 @@ public class Principal {
         calculadora.incluye(gameOfThrones);
 
         System.out.println(calculadora.getTiempoTotal());
-        FiltroRecomendacion filtroRecomendacion = new FiltroRecomendacion();
 
-
-        filtroRecomendacion.filtra(miPelicula);
 
         Episodio episodio = new Episodio();
         episodio.setNumero(1);
@@ -46,6 +43,9 @@ public class Principal {
         episodio.setSerie(gameOfThrones);
         episodio.setTotalVisualizaciones(400);
 
+        FiltroRecomendacion filtroRecomendacion = new FiltroRecomendacion();
+
+        filtroRecomendacion.filtra(miPelicula);
         filtroRecomendacion.filtra(episodio);
     }
 }
