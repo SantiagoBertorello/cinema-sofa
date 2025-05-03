@@ -1,6 +1,6 @@
 package com.aluradesafio.cinemasofa.calculos;
 
-public interface Clasificacion {
+public interface Clasificable {
 
     int getClasificacion();
 
