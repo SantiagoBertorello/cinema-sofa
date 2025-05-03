@@ -1,28 +1,13 @@
-public class Pelicula {
-    String nombre;
-    int fechaDeLanzamiento;
-    int duracionEnMinutos;
-    float puntaje;
-    boolean incluidoEnElPlan;
-    private double sumaDeLasEvaluaciones;
-    private int  totalDeLasEvaluaciones;
+package com.aluradesafio.cinemasofa.modelos;
 
-    int getTotalDeLasEvaluaciones(){
-        return totalDeLasEvaluaciones;
-    };
+public class Pelicula extends Titulo {
+    private String director;
 
-
-    void muestraFichaTecnica(){
-        System.out.println("El nombre de la Película es: " + nombre);
-        System.out.println("Fecha de lanzamiento: " + fechaDeLanzamiento);
-        System.out.println("Duración en minutos: " + duracionEnMinutos);
-    };
-    void evalua(double nota){
-        sumaDeLasEvaluaciones += nota;
-        totalDeLasEvaluaciones++;
+    public String getDirector() {
+        return director;
     }
 
-    double calculaMedia(){
-        return sumaDeLasEvaluaciones / totalDeLasEvaluaciones;
+    public void setDirector(String director) {
+        this.director = director;
     }
 }
