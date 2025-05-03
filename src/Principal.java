@@ -28,7 +28,10 @@ public class Principal {
         System.out.println(gameOfThrones.getDuracionEnMinutos());
         gameOfThrones.muestraFichaTecnica();
 
-
+        CalculadoraDeTiempo calculadora = new CalculadoraDeTiempo();
+        calculadora.incluye(miPelicula);
+        calculadora.incluye(gameOfThrones);
+        System.out.println(calculadora.getTiempoTotal());
 
 
 
