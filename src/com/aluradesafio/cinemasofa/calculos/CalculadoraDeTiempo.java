@@ -1,6 +1,4 @@
 package com.aluradesafio.cinemasofa.calculos;
-
-import com.aluradesafio.cinemasofa.modelos.Pelicula;
 import com.aluradesafio.cinemasofa.modelos.Titulo;
 
 public class CalculadoraDeTiempo {

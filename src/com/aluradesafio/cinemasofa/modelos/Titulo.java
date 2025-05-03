@@ -43,13 +43,13 @@ public class Titulo {
 
     public int getTotalDeLasEvaluaciones(){
         return totalDeLasEvaluaciones;
-    };
+    }
 
     public void muestraFichaTecnica(){
         System.out.println("El nombre de la Película es: " + getNombre());
         System.out.println("Fecha de lanzamiento: " + getFechaDeLanzamiento());
         System.out.println("Duración en minutos: " + getDuracionEnMinutos());
-    };
+    }
     public void evalua(double nota){
         sumaDeLasEvaluaciones += nota;
         totalDeLasEvaluaciones++;
