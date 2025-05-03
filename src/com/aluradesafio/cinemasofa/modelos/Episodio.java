@@ -1,6 +1,8 @@
 package com.aluradesafio.cinemasofa.modelos;
 
-public class Episodio {
+import com.aluradesafio.cinemasofa.calculos.Clasificacion;
+
+public class Episodio implements Clasificacion {
 
     private int numero;
 
@@ -8,6 +10,7 @@ public class Episodio {
 
     private String serie;
 
+    private int totalVisualizaciones;
 
     public int getNumero(){
         return numero;
@@ -32,4 +35,14 @@ public class Episodio {
     public void setSerie(String serie) {
         this.serie = serie;
     }
+
+    @Override
+    public int getClasificacion() {
+        if (totalVisualizaciones > 1000){
+            return 4;
+        }else {
+            return 0;
+        }
+    }
+
 }
