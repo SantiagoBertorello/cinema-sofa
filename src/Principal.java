@@ -95,6 +95,10 @@ public class Principal {
             System.out.println(pelicula.getNombre());
         }
 
+        // Limpiar toda la lista
+        listaPeliculas.clear();
+        System.out.println("¿La lista está vacía ahora? " + listaPeliculas.isEmpty());
+
     }
 
 
