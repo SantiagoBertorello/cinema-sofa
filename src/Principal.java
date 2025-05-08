@@ -89,6 +89,12 @@ public class Principal {
             System.out.println(pelicula.getNombre());
         }
 
+        listaPeliculas.remove(0); // Elimina la película en el índice 0
+        System.out.println("Lista después de eliminar la primera película:");
+        for (Pelicula pelicula : listaPeliculas) {
+            System.out.println(pelicula.getNombre());
+        }
+
     }
 
 
