@@ -70,8 +70,11 @@ public class Principal {
         System.out.println("nompre de la primer pelicula: "+ listaPeliculas.get(0).getNombre()) ;
 
 
-        System.out.println(listaPeliculas);
+        System.out.println(listaPeliculas.toString());
         System.out.println(listaPeliculas.get(0).toString());
+
+        // Verificamos si la lista contiene una película específica
+        System.out.println("¿La lista contiene Gladiador? " + listaPeliculas.contains(nuevaPelicula));
     }
 
 
