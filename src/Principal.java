@@ -75,7 +75,23 @@ public class Principal {
 
         // Verificamos si la lista contiene una película específica
         System.out.println("¿La lista contiene Gladiador? " + listaPeliculas.contains(nuevaPelicula));
+
+        // Reemplazamos una película en cierta posición .
+        Pelicula peliculaReemplazo = new Pelicula();
+        peliculaReemplazo.setNombre("Matrix");
+        peliculaReemplazo.setFechaDeLanzamiento(1999);
+        peliculaReemplazo.setDuracionEnMinutos(136);
+        listaPeliculas.set(1, peliculaReemplazo);
+
+        // Imprimimos la lista después del reemplazo
+        System.out.println("Lista después del reemplazo:");
+        for (Pelicula pelicula : listaPeliculas) {
+            System.out.println(pelicula.getNombre());
+        }
+
     }
+
+
 
 
 }
