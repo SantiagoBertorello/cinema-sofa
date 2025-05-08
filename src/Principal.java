@@ -4,6 +4,9 @@ import com.aluradesafio.cinemasofa.modelos.Pelicula;
 import com.aluradesafio.cinemasofa.modelos.Serie;
 import com.aluradesafio.cinemasofa.calculos.FiltroRecomendacion;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 public class Principal {
     public static void main(String[] args) {
      //tipoDedato variable = nuevaInstancia se crea un nuevo espacio en la memoria para almacenar ese nuevo objeto
@@ -47,5 +50,29 @@ public class Principal {
 
         filtroRecomendacion.filtra(miPelicula);
         filtroRecomendacion.filtra(episodio);
+
+        var otraPelicula = new Pelicula();
+        otraPelicula.setNombre("El señor de los Anillos");
+        otraPelicula.setFechaDeLanzamiento(2001);
+        otraPelicula.setDuracionEnMinutos(180);
+
+        var nuevaPelicula = new Pelicula();
+        nuevaPelicula.setNombre("Gladiador");
+        nuevaPelicula.setFechaDeLanzamiento(2002);
+        nuevaPelicula.setDuracionEnMinutos(140);
+
+        ArrayList<Pelicula> listaPeliculas = new ArrayList<>();
+        listaPeliculas.add(nuevaPelicula);
+        listaPeliculas.add(miPelicula);
+        listaPeliculas.add(otraPelicula);
+
+        System.out.println("tamaño de la lista: " + listaPeliculas.size());
+        System.out.println("nompre de la primer pelicula: "+ listaPeliculas.get(0).getNombre()) ;
+
+
+        System.out.println(listaPeliculas);
+        System.out.println(listaPeliculas.get(0).toString());
     }
+
+
 }
