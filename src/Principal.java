@@ -10,8 +10,7 @@ import java.util.ArrayList;
 public class Principal {
     public static void main(String[] args) {
      //tipoDedato variable = nuevaInstancia se crea un nuevo espacio en la memoria para almacenar ese nuevo objeto
-        Pelicula miPelicula = new Pelicula();
-        miPelicula.setNombre("Encanto");
+        Pelicula miPelicula = new Pelicula("Encanto");
         miPelicula.setFechaDeLanzamiento(2021);
         miPelicula.setDuracionEnMinutos(120);
         miPelicula.setIncluidoEnElPlan(true);
@@ -51,13 +50,11 @@ public class Principal {
         filtroRecomendacion.filtra(miPelicula);
         filtroRecomendacion.filtra(episodio);
 
-        var otraPelicula = new Pelicula();
-        otraPelicula.setNombre("El señor de los Anillos");
+        var otraPelicula = new Pelicula("El señor de los Anillos");
         otraPelicula.setFechaDeLanzamiento(2001);
         otraPelicula.setDuracionEnMinutos(180);
 
-        var nuevaPelicula = new Pelicula();
-        nuevaPelicula.setNombre("Gladiador");
+        var nuevaPelicula = new Pelicula("Gladiador");
         nuevaPelicula.setFechaDeLanzamiento(2002);
         nuevaPelicula.setDuracionEnMinutos(140);
 
@@ -71,13 +68,13 @@ public class Principal {
 
 
         System.out.println(listaPeliculas.toString());
-        System.out.println(listaPeliculas.get(0).toString());
+        System.out.println("toString de la pélicula: " + listaPeliculas.get(0).toString());
 
         // Verificamos si la lista contiene una película específica
         System.out.println("¿La lista contiene Gladiador? " + listaPeliculas.contains(nuevaPelicula));
 
         // Reemplazamos una película en cierta posición .
-        Pelicula peliculaReemplazo = new Pelicula();
+        Pelicula peliculaReemplazo = new Pelicula("Matrix");
         peliculaReemplazo.setNombre("Matrix");
         peliculaReemplazo.setFechaDeLanzamiento(1999);
         peliculaReemplazo.setDuracionEnMinutos(136);
@@ -98,7 +95,7 @@ public class Principal {
         // Limpiar toda la lista
         listaPeliculas.clear();
         System.out.println("¿La lista está vacía ahora? " + listaPeliculas.isEmpty());
-
+        
     }
 
 

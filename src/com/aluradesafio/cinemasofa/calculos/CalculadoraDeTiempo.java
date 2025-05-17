@@ -1,7 +1,7 @@
 package com.aluradesafio.cinemasofa.calculos;
 import com.aluradesafio.cinemasofa.modelos.Titulo;
 
-public class CalculadoraDeTiempo {
+public class  CalculadoraDeTiempo {
     private int tiempoTotal;
 
     public int getTiempoTotal() {
