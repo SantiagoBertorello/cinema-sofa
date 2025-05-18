@@ -10,8 +10,8 @@ import java.util.ArrayList;
 public class Principal {
     public static void main(String[] args) {
      //tipoDedato variable = nuevaInstancia se crea un nuevo espacio en la memoria para almacenar ese nuevo objeto
-        Pelicula miPelicula = new Pelicula("Encanto");
-        miPelicula.setFechaDeLanzamiento(2021);
+        Pelicula miPelicula = new Pelicula("Encanto",2006);
+
         miPelicula.setDuracionEnMinutos(120);
         miPelicula.setIncluidoEnElPlan(true);
         miPelicula.muestraFichaTecnica();
@@ -23,9 +23,7 @@ public class Principal {
         System.out.println("El nombre de la pelicula ingresado es: " + miPelicula.getNombre());
         System.out.println("Se encuentra incluido en el plan: " + miPelicula.isIncluidoEnElPlan());
 
-        Serie gameOfThrones = new Serie();
-        gameOfThrones.setNombre("Game Of Thrones");
-        gameOfThrones.setFechaDeLanzamiento(2018);
+        Serie gameOfThrones = new Serie("Game Of Thrones",2018);
         gameOfThrones.setTemporadas(6);
         gameOfThrones.setMinutosPorEpisodio(50);
         gameOfThrones.setEpisodiosPorTemporada(7);
@@ -50,12 +48,11 @@ public class Principal {
         filtroRecomendacion.filtra(miPelicula);
         filtroRecomendacion.filtra(episodio);
 
-        var otraPelicula = new Pelicula("El señor de los Anillos");
-        otraPelicula.setFechaDeLanzamiento(2001);
+        var otraPelicula = new Pelicula("El señor de los Anillos", 2001);
         otraPelicula.setDuracionEnMinutos(180);
 
-        var nuevaPelicula = new Pelicula("Gladiador");
-        nuevaPelicula.setFechaDeLanzamiento(2002);
+        var nuevaPelicula = new Pelicula("Gladiador", 2002);
+
         nuevaPelicula.setDuracionEnMinutos(140);
 
         ArrayList<Pelicula> listaPeliculas = new ArrayList<>();
@@ -74,9 +71,8 @@ public class Principal {
         System.out.println("¿La lista contiene Gladiador? " + listaPeliculas.contains(nuevaPelicula));
 
         // Reemplazamos una película en cierta posición .
-        Pelicula peliculaReemplazo = new Pelicula("Matrix");
-        peliculaReemplazo.setNombre("Matrix");
-        peliculaReemplazo.setFechaDeLanzamiento(1999);
+        Pelicula peliculaReemplazo = new Pelicula("Matrix",1998);
+
         peliculaReemplazo.setDuracionEnMinutos(136);
         listaPeliculas.set(1, peliculaReemplazo);
 
