@@ -3,6 +3,7 @@ import com.aluradesafio.cinemasofa.modelos.Episodio;
 import com.aluradesafio.cinemasofa.modelos.Pelicula;
 import com.aluradesafio.cinemasofa.modelos.Serie;
 import com.aluradesafio.cinemasofa.calculos.FiltroRecomendacion;
+import com.aluradesafio.cinemasofa.modelos.Titulo;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -82,16 +83,38 @@ public class Principal {
             System.out.println(pelicula.getNombre());
         }
 
+        /*
         listaPeliculas.remove(0); // Elimina la película en el índice 0
         System.out.println("Lista después de eliminar la primera película:");
         for (Pelicula pelicula : listaPeliculas) {
             System.out.println(pelicula.getNombre());
         }
 
+
         // Limpiar toda la lista
         listaPeliculas.clear();
         System.out.println("¿La lista está vacía ahora? " + listaPeliculas.isEmpty());
-        
+        */
+
+
+        ArrayList<Titulo> lista = new ArrayList<>();
+        lista.add(miPelicula);
+        lista.add(nuevaPelicula);
+        lista.add(gameOfThrones);//serie
+        lista.add(otraPelicula);
+
+        lista.forEach(System.out::println);
+
+        System.out.println("\n################\n");
+
+        for( Titulo item: lista){
+            System.out.println(item.getNombre());
+            if(item instanceof Pelicula){
+                Pelicula pelicula = (Pelicula) item;
+                System.out.println(pelicula.getClasificacion());
+            }
+        }
+
     }
 
 
