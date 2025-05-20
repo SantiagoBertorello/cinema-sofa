@@ -2,8 +2,7 @@ import com.aluradesafio.cinemasofa.modelos.Pelicula;
 import com.aluradesafio.cinemasofa.modelos.Serie;
 import com.aluradesafio.cinemasofa.modelos.Titulo;
 
-import java.util.ArrayList;
-import java.util.Collections;
+import java.util.*;
 
 public class PrincipalLista {
     public static void main (String[] args) {
@@ -39,13 +38,15 @@ public class PrincipalLista {
         System.out.println("\n Lista Títulos:");
         lista.forEach(System.out::println);
         System.out.println("\n ############");
+
         System.out.println("Lista Titulos Ordenada:");
         Collections.sort(lista);
         lista.forEach(System.out::println);
 
+        lista.sort(Comparator.comparing(Titulo::getFechaDeLanzamiento));
+        System.out.println("Lista Titulos Ordenada: " + lista);
 
-
-        ArrayList<String> listaActores = new ArrayList<>();
+        List<String> listaActores = new LinkedList<>();
 
         listaActores.add("Ricardo Darín");
         listaActores.add("Monica Astur");
@@ -63,6 +64,8 @@ public class PrincipalLista {
         Collections.sort(listaActores);
         listaActores.forEach(System.out::println);
 
+        lista.sort(Comparator.comparing(Titulo::getFechaDeLanzamiento));
+        System.out.println("Lista Titulos por fecha: " + lista);
 
 
     }

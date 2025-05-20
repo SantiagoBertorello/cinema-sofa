@@ -88,7 +88,7 @@ public class Principal {
         System.out.println("Lista después de eliminar la primera película:");
         for (Pelicula pelicula : listaPeliculas) {
             System.out.println(pelicula.getNombre());
-        }
+            }
 
 
         // Limpiar toda la lista
